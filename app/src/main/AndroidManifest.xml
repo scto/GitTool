@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="xyz.illuminate.git">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/Theme.GitTool"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="xyz.illuminate.git.repolist.RepoListActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter android:label="@string/clone_with_mgit">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="*" />
+                <data android:pathPattern="@string/ending_with_git" />
+            </intent-filter>
+            <intent-filter android:label="@string/clone_with_mgit">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/https" />
+                <data android:scheme="@string/http" />
+                <data android:scheme="@string/git" />
+                <data android:scheme="@string/ssh" />
+                <data android:host="@string/github.com" />
+                <data android:host="@string/gitlab.com" />
+                <data android:host="@string/bitbucket.com" />
+                <data android:host="@string/notabug.org" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.RepoDetailActivity"
+            android:label="@string/title_activity_repo_detail"
+            android:parentActivityName="xyz.illuminate.git.repolist.RepoListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="xyz.illuminate.git.repolist.RepoListActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ViewFileActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".activities.RepoDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.RepoDetailActivity" />
+        </activity>
+        <activity
+            android:name=".activities.BranchChooserActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".activities.RepoDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.RepoDetailActivity" />
+        </activity>
+        <activity
+            android:name=".activities.CommitDiffActivity"
+            android:parentActivityName=".activities.RepoDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.RepoDetailActivity" />
+        </activity>
+        <activity
+            android:name=".activities.explorer.ImportRepositoryActivity"
+            android:label="@string/title_activity_import_repository"
+            android:parentActivityName="xyz.illuminate.git.repolist.RepoListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="xyz.illuminate.git.repolist.RepoListActivity" />
+        </activity>
+        <activity
+            android:name=".activities.explorer.PrivateKeyManageActivity"
+            android:label="@string/title_activity_private_key_manage"
+            android:parentActivityName="xyz.illuminate.git.repolist.RepoListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="xyz.illuminate.git.repolist.RepoListActivity" />
+        </activity>
+        <activity
+            android:name=".activities.explorer.ExploreFileActivity"
+            android:label="@string/title_activity_explore_file"
+            android:parentActivityName=".activities.explorer.PrivateKeyManageActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.explorer.PrivateKeyManageActivity" />
+        </activity>
+        <activity
+            android:name=".activities.UserSettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="xyz.illuminate.git.repolist.RepoListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="xyz.illuminate.git.repolist.RepoListActivity" />
+        </activity>
+        <activity
+            android:name=".activities.explorer.ExploreRootDirActivity"
+            android:label="@string/title_activity_explore_file"
+            android:parentActivityName=".activities.UserSettingsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.UserSettingsActivity" />
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="xyz.illuminate.git.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+
+    </application>
+
+</manifest>

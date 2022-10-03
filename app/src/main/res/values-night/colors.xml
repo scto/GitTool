@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#2f0066ff</color>
+    <color name="purple_500">#0a000000</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="pressed_sgit">#CC33B5E5</color>
+    <color name="branch_name_text">#FFF</color>
+    <color name="branch_name_bg">#02a1d6</color>
+    <color name="branch_name_bg_pressed">#33b5e5</color>
+    <color name="general_gray_text_color">#999</color>
+    <color name="chosen_sgit">#BC43C5D5</color>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/activity_file_list.xml" value="0.264" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/activity_repo_detail.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/activity_repo_detail_content.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/activity_view_diff.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/activity_view_file.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/clone_view.xml" value="0.264" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_add_remote.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_checkout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_commit.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_edit_text.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_error.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_generate_key.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_import_repo.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_init_repo.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_merge.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_prompt_for_password.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_prompt_for_password_only.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_pull.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_push.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_remove_remote.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_rename_branch.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_rename_key.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/dialog_repo_config.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/drawer_list_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/fragment_branches.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/fragment_commits.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/fragment_files.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/fragment_status.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/fragment_view_file.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/listitem_commits.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/listitem_dialog_choose_commit.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/listitem_files.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/pull_progress.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/StudioProjects/GitTool/app/src/main/res/layout/repo_listitem.xml" value="0.4" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

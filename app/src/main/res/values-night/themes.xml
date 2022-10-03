@@ -1,0 +1,7 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.GitTool" parent="Theme.Material3.Dark">
+        <item name="android:actionMenuTextColor">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>

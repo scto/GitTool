@@ -1,0 +1,57 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.GitTool" parent="Theme.Material3.DynamicColors.DayNight">
+        <item name="android:actionMenuTextColor">@android:color/black</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="ActionBar.Solid.Sgit" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/ab_background_textured_sgit</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_sgit</item>
+        <item name="android:backgroundSplit">@drawable/ab_background_textured_sgit</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Sgit</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Sgit" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_sgit</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Sgit</item>
+    </style>
+
+    <style name="PopupMenu.Sgit" parent="@android:style/Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_sgit</item>
+    </style>
+
+    <style name="DropDownListView.Sgit" parent="@android:style/Widget.Holo.Light.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_sgit</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Sgit" parent="@android:style/Widget.Holo.Light.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_sgit</item>
+    </style>
+
+    <style name="DropDownNav.Sgit" parent="@android:style/Widget.Holo.Light.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_sgit</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_sgit</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_sgit</item>
+    </style>
+
+    <style name="ProgressBar.Sgit" parent="@android:style/Widget.Holo.Light.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_sgit</item>
+    </style>
+
+    <style name="ActionButton.CloseMode.Sgit" parent="@android:style/Widget.Holo.Light.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_sgit</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Sgit.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Sgit</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Sgit</item>
+    </style>
+
+    <style name="items_with_same_width">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+</resources>

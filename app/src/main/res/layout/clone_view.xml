@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="xyz.illuminate.git.repolist.RepoListActivity.ClickActions" />
+
+        <variable
+            name="viewModel"
+            type="xyz.illuminate.git.clone.CloneViewModel" />
+
+        <variable
+            name="clickHandler"
+            type="xyz.illuminate.git.common.OnActionClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/general_padding"
+        android:visibility="@{viewModel.visible ? View.VISIBLE : View.GONE}"
+        tools:visibility="visible">
+
+
+        <LinearLayout
+            android:id="@+id/cloneViewForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_clone_repo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="@{viewModel.initLocal ? View.GONE : View.VISIBLE}"
+                app:errorEnabled="true"
+                app:errorText="@{viewModel.remoteUrlError}">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/general_vertical_margin"
+                    android:hint="@string/label_remote_url"
+                    android:imeOptions="actionNext"
+                    android:inputType="textUri"
+                    android:singleLine="true"
+                    android:text="@={viewModel.remoteUrl}"
+                    android:textSize="@dimen/general_dialog_text_size" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:errorText="@{viewModel.localRepoNameError}">
+
+                <EditText
+                    android:id="@+id/localPath"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/general_vertical_margin"
+                    android:hint="@string/dialog_clone_local_path_hint"
+                    android:imeOptions="actionNext"
+                    android:inputType="textNoSuggestions"
+                    android:singleLine="true"
+                    android:text="@={viewModel.localRepoName}"
+                    android:textSize="@dimen/general_dialog_text_size" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="@={viewModel.initLocal}"
+                android:text="@string/dialog_clone_neutral_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cloneViewForm" />
+
+            <CheckBox
+                android:id="@+id/cloneRecursive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:checked="@={viewModel.cloneRecursively}"
+                android:text="@string/dialog_clone_recursive"
+                android:visibility="@{viewModel.initLocal ? View.GONE : View.VISIBLE}" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cloneViewCloneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> clickHandler.onActionClick(ClickActions.CLONE.name)}"
+            android:text="@{viewModel.initLocal ? @string/label_init : @string/label_clone}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cloneViewForm"
+            tools:text="@string/label_clone" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> clickHandler.onActionClick(ClickActions.CANCEL.name)}"
+            android:text="@string/label_cancel"
+            app:layout_constraintEnd_toStartOf="@id/cloneViewCloneButton"
+            app:layout_constraintTop_toBottomOf="@id/cloneViewForm" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
